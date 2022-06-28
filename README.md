@@ -2,7 +2,7 @@
 Buid api supply for nft diplimas, course ...
 
 --- Install enviroiment ----
-Prepare the environment (docker):
+# Prepare the environment (docker):
 
 image: base CentOS (Reson does not make go lang, so build on Alpine)
 
@@ -14,33 +14,32 @@ npm >= 8.1.2
 
 node >= 16.13.2
 
-Prepare the enviroiment (lib): 
+# Prepare the enviroiment (lib): 
 
-prepare-enviroment.sh
+# prepare-enviroment.sh
 
 Deploy Smart Contract (Skip if the contract is already deployed and has a contract_address, because every time you depploy the wallet, you lose Aura coin):
 
-Nếu chưa có ví cần tạo ví mới trên local: 
+If you don't have a wallet, you need to create a new wallet locally: 
 
+# Aurad add keys wallet
 
-aurad add keys wallet
-Nếu đã có ví cần deploy ví lên testnest bằng cách chat Discord sau đó map thông tin ví đã có vào minter_address: 
-
+If you already have a wallet, you need to deploy the wallet to testnest by chatting with Discord then map the existing wallet infomation to minter_address:
 
 INIT='{"minter":"{minter_address}","name":"Aura NFT","symbol":"ANFT"}'
-CODE_ID được lấy sau khi chat trên discord lấy tx_hash (không dùng tx_hash để get ra CODE_ID được)
+CODE_ID is obtained affter chatting on discord  to get tx_hash (cannot use tx_hash  to get CODE_ID)
 
 
 # instantiate contract
 aurad tx wasm instantiate $CODE_ID "$INIT" \
     --from wallet --label "cw721" $TXFLAG -y --no-admin
-Không cần quan tâm 2 bước trên chạy file .sh để deploy contract của Sargon (chú ý phải dùng tx_hash lấy ra từ $RES, cần sửa file này trước khi chạy):
+No need to care about the above 2 steps, run the .sh file to deploy Sargon's contract (Note that you must use tx_hash take from $RES, need to edit this fil before running)
 
-deploy_contract.sh
-28 Jun 2022, 08:13 PM
-Run dapp
+# deploy_contract.sh
 
-Team đang sử dụng config:
+# Run dapp
+
+# Team is using config:
 
 MNEMONIC='barely leave mother plunge broccoli loud tube hamster arctic captain fiber jar'
 RPC='https://rpc.serenity.aura.network:443'
