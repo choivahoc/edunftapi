@@ -116,7 +116,7 @@ router.route('/Token/Mint').post(async (req, res) => {
     amount: [
       {
         denom: 'uaura',
-        amount: '16',
+        amount: '153',
       },
     ],
     gas: '152375',
