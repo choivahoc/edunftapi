@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  edu-nft-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: edu-nft-api-image
+    container_name: edu-nft-api-container
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "8050:8050"
+#    volumes:
+#      - .:/home/node/app
+#      - node_modules:/home/node/app/node_modules
+    networks:
+      - edu-nft-network
+networks:
+  edu-nft-network:
+    driver: bridge
