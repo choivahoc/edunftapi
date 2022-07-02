@@ -116,7 +116,10 @@
     },
     "/Image/Get/{cid}": {
       "get": {
-        "description": "",
+        "tags": [
+          "Image"
+        ],
+        "description": "Get Image Upload Info",
         "parameters": [
           {
             "name": "cid",

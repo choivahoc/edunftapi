@@ -219,6 +219,8 @@ router.route('/Token/Get/:id').get(async (req, res) => {
 // })
 
 router.route('/Image/Get/:cid').get(async (req, res) => {
+  /* 	#swagger.tags = ['Image']
+  #swagger.description = 'Get Image Upload Info' */
   const cidString = String(req.params.cid);
   const fileName = String(req.query.fileName)
   const cidRes = await storage.get(cidString)
