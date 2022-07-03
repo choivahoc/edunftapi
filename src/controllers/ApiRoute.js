@@ -241,9 +241,7 @@ router.route('/Image/Get/:cid').get(async (req, res) => {
       const imageGatewayURL = makeGatewayURL(cidString, fileName);
       const imageURI = `ipfs://${cidString}/${fileName}`;
       const metadataURI = `ipfs://${cidString}/metadata.json`;
-      result = {
-        data: { cidString, metadataGatewayURL, imageGatewayURL, imageURI, metadataURI }
-      }
+      result = { cidString, metadataGatewayURL, imageGatewayURL, imageURI, metadataURI }
     }
   }
   try {
