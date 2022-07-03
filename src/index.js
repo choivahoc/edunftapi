@@ -24,10 +24,10 @@ app.use(bodyParser.json());
 
 /* Routes */
 import router from './routes.js';
+import cors from "cors";
 
 /* Middlewares */
-var cors = require('cors');
-app.use(cors());
+app.use(cors);
 app.use(router);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
