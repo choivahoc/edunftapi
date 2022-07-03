@@ -26,6 +26,8 @@ app.use(bodyParser.json());
 import router from './routes.js';
 
 /* Middlewares */
+var cors = require('cors');
+app.use(cors());
 app.use(router);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
