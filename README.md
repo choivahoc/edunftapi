@@ -1,5 +1,5 @@
 # edunftapi
-http://nftapi.choivahoc.vn/
+http://nftapi.choivahoc.vn/docs/
 
 Buid api supply for nft diplimas, course ...
 
