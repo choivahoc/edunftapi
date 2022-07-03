@@ -1,4 +1,4 @@
-FROM node:16.15
+FROM node:17
 
 ARG app_name=edunft
 
