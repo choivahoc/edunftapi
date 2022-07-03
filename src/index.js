@@ -27,7 +27,10 @@ import router from './routes.js';
 import cors from "cors";
 
 /* Middlewares */
-app.use(cors);
+app.use(cors({
+    origin: '*',
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+}));
 app.use(router);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
 
