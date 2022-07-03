@@ -1,0 +1,41 @@
+{
+  "name": "edunft",
+  "version": "1.0.0",
+  "description": "Edu NFT Dapp API",
+  "main": "swagger.js",
+  "type": "module",
+  "dependencies": {
+    "@cosmjs/cosmwasm-stargate": "0.28.4",
+    "@cosmjs/proto-signing": "^0.28.4",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.2.1",
+    "swagger-autogen": "^2.18.8",
+    "swagger-ui-express": "^4.1.4",
+    "tslib": "^2.3.1",
+    "web3.storage": "^3.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "start-gendoc": "node swagger.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choivahoc/edunft.git"
+  },
+  "keywords": [
+    "edu",
+    "nft",
+    "sargon"
+  ],
+  "author": "sargon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/choivahoc/edunft/issues"
+  },
+  "homepage": "https://github.com/choivahoc/edunft#readme"
+}
