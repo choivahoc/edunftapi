@@ -29,7 +29,7 @@ import cors from "cors";
 /* Middlewares */
 app.use(cors({
     origin: '*',
-    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
+    // methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 app.use(router);
 app.use('/docs', swaggerUi.serve, swaggerUi.setup(swaggerFile));
