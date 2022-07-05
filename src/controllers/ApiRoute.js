@@ -12,7 +12,6 @@ const rpcEndpoint = process.env.RPC;
 const contractAddress = process.env.CONTRACT;
 const web3Token = process.env.WEB3_STORAGE_TOKEN;
 const tokenOwner = process.env.TOKEN_OWNER;
-const tokenId = process.env.TOKEN_ID;
 const tokenUri = process.env.TOKEN_ID;
 const storage = new Web3Storage({ token: web3Token });
 
@@ -107,7 +106,7 @@ router.route('/Token/Mint').post(async (req, res) => {
 
   const mintMsg = {
     mint: {
-      token_id: tokenId,
+      token_id: req.body.token_id,
       owner: tokenOwner,
       token_uri: tokenUri,
       extension: {
