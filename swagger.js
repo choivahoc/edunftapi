@@ -32,6 +32,7 @@ const doc = {
     },
     definitions: {
         Mint: {
+            $token_id: {},
             $diplomas: {},
             $images: {},
         },

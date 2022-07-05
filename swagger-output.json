@@ -148,6 +148,10 @@
     "Mint": {
       "type": "object",
       "properties": {
+        "token_id": {
+          "type": "object",
+          "properties": {}
+        },
         "diplomas": {
           "type": "object",
           "properties": {}
@@ -158,6 +162,7 @@
         }
       },
       "required": [
+        "token_id",
         "diplomas",
         "images"
       ]
