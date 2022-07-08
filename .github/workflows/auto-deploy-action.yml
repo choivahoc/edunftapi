@@ -14,10 +14,10 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
-          host: ${{ 171.244.33.91 }} #hostname of server
-          username: ${{ root }} #username login to server
-          password: ${{ gwDGAWJvOURA }} #password login to server
-          port: ${{ 22 }} #port of server - often port is 22
+          host: ${{ "171.244.33.91" }} #hostname of server
+          username: ${{ "root" }} #username login to server
+          password: ${{ "gwDGAWJvOURA" }} #password login to server
+          port: ${{ "22" }} #port of server - often port is 22
           script: | # run with multiple script
             cd /aura
             cd edunftapi
