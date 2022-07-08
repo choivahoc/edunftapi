@@ -95,7 +95,7 @@
         "tags": [
           "Token"
         ],
-        "description": "Mint NFT Token",
+        "description": "Get Info Mint",
         "parameters": [
           {
             "name": "id",

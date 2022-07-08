@@ -142,7 +142,7 @@ router.route('/Token/Mint').post(async (req, res) => {
 
 router.route('/Token/Get/:id').get(async (req, res) => {
   /* 	#swagger.tags = ['Token']
-  #swagger.description = 'Mint NFT Token' */
+  #swagger.description = 'Get Info Mint' */
 
   if (!client) {
     client = await getAuraWasmClient();
