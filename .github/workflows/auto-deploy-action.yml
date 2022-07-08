@@ -14,13 +14,13 @@ jobs:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
         with:
-          host: 171.244.33.91 #hostname of server
-          username: root #username login to server
-          password: gwDGAWJvOURA #password login to server
-          port: 22 #port of server - often port is 22
+          host: ${{ secrets.HOST }} #hostname of server
+          username: ${{ secrets.USERNAME }} #username login to server
+          password: ${{ secrets.PASSWORD }} #password login to server
+          port: ${{ secrets.PORT }} #port of server - often port is 22
           script: | # run with multiple script
             cd /aura
             cd edunftapi
             git pull
-            printf "build docker iamge"
+            printf "build docker image"
             ./deploy.sh
